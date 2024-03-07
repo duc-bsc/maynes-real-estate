@@ -16,12 +16,6 @@ export default defineType({
             },
         },
         {
-            type: 'string',
-            name: 'title',
-            title: 'Title',
-            validation: (rule) => rule.required(),
-        },
-        {
             type: 'number',
             name: 'price',
             title: 'Price',
@@ -33,7 +27,8 @@ export default defineType({
             options: {
                 list: [
                     { title: 'Public', value: 'public' },
-                    { title: 'Craft', value: 'craft' }
+                    { title: 'Craft', value: 'craft' },
+                    { title: 'For Sale', value: 'forSale' },
                 ],
             }
         },
@@ -80,13 +75,12 @@ export default defineType({
     ],
     preview: {
         select: {
-            title: 'title',
+            title: 'address',
             media: 'mainImage',
-            address: 'address',
         },
-        prepare({ title, media, address }) {
+        prepare({ title, media,  }) {
             return {
-                subtitle: address,
+                // subtitle: address,
                 title,
                 media
             }
