@@ -71,6 +71,12 @@ export default defineType({
             type: 'houseLotDetails',
 
         },
+        {
+            name: 'additionalInformation',
+            title: 'Additional Information',
+            type: 'houseAdditionalInformation',
+
+        },
     ],
     preview: {
         select: {

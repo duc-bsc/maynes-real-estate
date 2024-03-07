@@ -1,1 +1,1 @@
-git add . && git commit -m "General Details" && git push
+git add . && git commit -m "Additional Information" && git push
