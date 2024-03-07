@@ -38,6 +38,19 @@ export default defineType({
             title: 'Address',
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'address',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            }
+        },
+        {
             type: 'string',
             name: 'contact',
             title: 'Contact',
@@ -78,7 +91,7 @@ export default defineType({
             title: 'address',
             media: 'mainImage',
         },
-        prepare({ title, media,  }) {
+        prepare({ title, media, }) {
             return {
                 // subtitle: address,
                 title,

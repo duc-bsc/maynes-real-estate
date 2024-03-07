@@ -6,6 +6,7 @@ import { draftMode } from 'next/headers'
 import { client } from '@/sanity/lib/client'
 import {
   homePageQuery,
+  optionsQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
@@ -67,6 +68,13 @@ export function loadSettings() {
     settingsQuery,
     {},
     { next: { tags: ['settings', 'home', 'page', 'project'] } },
+  )
+}
+export function loadOptions() {
+  return loadQuery<SettingsPayload>(
+    optionsQuery,
+    {},
+    { next: { tags: ['options', 'houses'] } },
   )
 }
 

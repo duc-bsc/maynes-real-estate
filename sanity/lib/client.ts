@@ -1,5 +1,5 @@
 import { createClient } from '@sanity/client/stega'
-
+import imageUrlBuilder from '@sanity/image-url'
 import {
   apiVersion,
   dataset,
@@ -28,6 +28,12 @@ export const client = createClient({
   },
 })
 
-console.warn(
-  'This template is using stega to embed Content Source Maps, see more information here: https://www.sanity.io/docs/loaders-and-overlays#26cf681fadd4',
-)
+const builder = imageUrlBuilder({
+  // baseUrl: 'https://cdn.sanity.io',
+  projectId: projectId,
+  dataset: dataset,
+})
+export const getUrlImage =(url:string)=>{
+  return builder.image(url).url()
+
+}

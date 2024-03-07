@@ -52,3 +52,6 @@ export const settingsQuery = groq`
     ogImage,
   }
 `
+export const optionsQuery = groq`
+  *[_type == "options"][0]
+`
