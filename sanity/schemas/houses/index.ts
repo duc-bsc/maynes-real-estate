@@ -52,6 +52,12 @@ export default defineType({
             title: 'Description',
             type: 'textEditor',
 
+        },
+        {
+            name: 'basicListingInfo',
+            title: 'Basic Listing Info',
+            type: 'housesBasicListingInfo',
+
         }
     ],
     preview: {

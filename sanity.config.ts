@@ -14,6 +14,7 @@ import { pageStructure, singletonPlugin } from '@/sanity/plugins/settings'
 import houses from '@/sanity/schemas/houses'
 import options from '@/sanity/schemas/global/options'
 import textEditor from '@/sanity/schemas/blocks/textEditor'
+import housesBasicListingInfo from '@/sanity/schemas/houses/housesBasicListingInfo'
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
   'Next.js Personal Website with Sanity.io'
@@ -37,7 +38,8 @@ export default defineConfig({
       // milestone,
       // timeline,
       houses,
-      textEditor
+      textEditor,
+      housesBasicListingInfo
     ],
   },
   plugins: [
