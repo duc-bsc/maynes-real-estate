@@ -41,7 +41,7 @@ const HousesLayout = (props: Props) => {
                                 </li>
                             </ul>
 
-                            <Link href={item?.slug?.current || ''} className='bg-green-700 text-white p-2 inline-flex'  > See Detail</Link>
+                            <Link href={'/houses/' +item?.slug?.current || ''} className='bg-green-700 text-white p-2 inline-flex'  > See Detail</Link>
                         </div>
                     </div>
                 ))

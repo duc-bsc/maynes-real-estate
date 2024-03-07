@@ -58,3 +58,6 @@ export const optionsQuery = groq`
 export const housesQuery = groq`
   *[_type == "houses"]
 `
+
+export const housesBySlugQuery = groq`
+  *[_type == "houses" && slug.current == $slug][0] `

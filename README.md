@@ -1,1 +1,1 @@
-git add . && git commit -m "page home" && git push
+git add . && git commit -m "page house detail" && git push

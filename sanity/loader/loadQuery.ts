@@ -7,6 +7,7 @@ import { client } from '@/sanity/lib/client'
 import {
   homePageQuery,
   housesQuery,
+  housesBySlugQuery,
   optionsQuery,
   pagesBySlugQuery,
   projectBySlugQuery,
@@ -99,6 +100,13 @@ export function loadProject(slug: string) {
     projectBySlugQuery,
     { slug },
     { next: { tags: [`project:${slug}`] } },
+  )
+}
+export function loadHousesBySlug(slug: string) {
+  return loadQuery<any | null>(
+    housesBySlugQuery,
+    { slug },
+    { next: { tags: [`houses:${slug}`] } },
   )
 }
 
