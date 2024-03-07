@@ -1,1 +1,1 @@
-git add . && git commit -m "header logo" && git push
+git add . && git commit -m "page home" && git push

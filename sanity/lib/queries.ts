@@ -55,3 +55,6 @@ export const settingsQuery = groq`
 export const optionsQuery = groq`
   *[_type == "options"][0]
 `
+export const housesQuery = groq`
+  *[_type == "houses"]
+`

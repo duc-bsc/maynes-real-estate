@@ -15,7 +15,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "@portabletext/react": "3.0.11",
+    "@portabletext/react": "^3.0.11",
     "@sanity/demo": "2.0.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/preview-url-secret": "1.6.4",
