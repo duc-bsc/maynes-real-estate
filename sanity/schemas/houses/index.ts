@@ -60,6 +60,12 @@ export default defineType({
 
         },
         {
+            name: 'generalDetails',
+            title: 'General Details',
+            type: 'housesGeneralDetails',
+
+        },
+        {
             name: 'lotDetails',
             title: 'House & Lot Details',
             type: 'houseLotDetails',

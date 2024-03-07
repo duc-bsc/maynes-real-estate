@@ -16,6 +16,7 @@ import options from '@/sanity/schemas/global/options'
 import textEditor from '@/sanity/schemas/blocks/textEditor'
 import housesBasicListingInfo from '@/sanity/schemas/houses/housesBasicListingInfo'
 import houseLotDetails from '@/sanity/schemas/houses/houseLotDetails'
+import housesGeneralDetails from '@/sanity/schemas/houses/housesGeneralDetails'
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
   'Next.js Personal Website with Sanity.io'
@@ -41,7 +42,8 @@ export default defineConfig({
       houses,
       textEditor,
       housesBasicListingInfo,
-      houseLotDetails
+      houseLotDetails,
+      housesGeneralDetails
     ],
   },
   plugins: [
