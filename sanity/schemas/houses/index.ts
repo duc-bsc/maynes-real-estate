@@ -58,7 +58,13 @@ export default defineType({
             title: 'Basic Listing Info',
             type: 'housesBasicListingInfo',
 
-        }
+        },
+        {
+            name: 'lotDetails',
+            title: 'House & Lot Details',
+            type: 'houseLotDetails',
+
+        },
     ],
     preview: {
         select: {

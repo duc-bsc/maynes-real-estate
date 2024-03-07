@@ -1,1 +1,1 @@
-git add . && git commit -m "housesBasicListingInfo" && git push
+git add . && git commit -m "House & Lot Details" && git push
