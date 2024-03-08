@@ -18,6 +18,9 @@ import housesBasicListingInfo from '@/sanity/schemas/houses/housesBasicListingIn
 import houseLotDetails from '@/sanity/schemas/houses/houseLotDetails'
 import housesGeneralDetails from '@/sanity/schemas/houses/housesGeneralDetails'
 import houseAdditionalInformation from '@/sanity/schemas/houses/houseAdditionalInformation'
+import farms from '@/sanity/schemas/farms/index'
+import farmsAgent from '@/sanity/schemas/farms/farmsAgent'
+import farmsDetails from '@/sanity/schemas/farms/farmsDetails'
 const title =
   process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE ||
   'Next.js Personal Website with Sanity.io'
@@ -45,7 +48,10 @@ export default defineConfig({
       housesBasicListingInfo,
       houseLotDetails,
       housesGeneralDetails,
-      houseAdditionalInformation
+      houseAdditionalInformation,
+      farms,
+      farmsAgent,
+      farmsDetails,
     ],
   },
   plugins: [
