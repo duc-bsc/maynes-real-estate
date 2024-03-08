@@ -12,6 +12,8 @@ import {
   pagesBySlugQuery,
   projectBySlugQuery,
   settingsQuery,
+  farmsQuery,
+  farmsBySlugQuery
 } from '@/sanity/lib/queries'
 import { token } from '@/sanity/lib/token'
 import {
@@ -109,11 +111,26 @@ export function loadHousesBySlug(slug: string) {
     { next: { tags: [`houses:${slug}`] } },
   )
 }
+export function loadFarmsBySlug(slug: string) {
+  return loadQuery<any | null>(
+    farmsBySlugQuery,
+    { slug },
+    { next: { tags: [`farms:${slug}`] } },
+  )
+}
 
 export function loadPage(slug: string) {
   return loadQuery<PagePayload | null>(
     pagesBySlugQuery,
     { slug },
     { next: { tags: [`page:${slug}`] } },
+  )
+}
+
+export function loadFarms() {
+  return loadQuery<any>(
+    farmsQuery,
+    {},
+    { next: { tags: ['options', 'houses','farms'] } },
   )
 }

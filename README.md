@@ -1,1 +1,1 @@
-git add . && git commit -m "schema farms" && git push
+git add . && git commit -m "Farms" && git push

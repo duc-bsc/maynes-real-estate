@@ -16,6 +16,19 @@ export default defineType({
             },
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'location',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            }
+        },
+        {
             type: 'string',
             name: 'location',
             title: 'Location',
@@ -40,7 +53,7 @@ export default defineType({
             name: 'details',
             title: 'Details',
         },
-       
+
     ],
     preview: {
         select: {
